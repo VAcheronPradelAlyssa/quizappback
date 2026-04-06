@@ -89,5 +89,3 @@ mvn test
 
 ### Auteur
 Alyssa Vacheron
-
-N’hésitez pas à me contacter pour toute question technique ou opportunité !
