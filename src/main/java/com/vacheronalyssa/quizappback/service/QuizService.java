@@ -61,7 +61,7 @@ public class QuizService {
         return questionRepository.findById(id).map(question -> {
             question.setText(questionDetails.getText());
             question.setOptions(questionDetails.getOptions());
-            question.setCorrectAnswer(questionDetails.getCorrectAnswer());
+            question.setAnswer(questionDetails.getAnswer());
             return questionRepository.save(question);
         }).orElseThrow(() -> new RuntimeException("Question not found with id: " + id));
     }

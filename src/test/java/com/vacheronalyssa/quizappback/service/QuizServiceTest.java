@@ -46,7 +46,7 @@ class QuizServiceTest {
         testQuestion.setId(1L);
         testQuestion.setText("What is Java?");
         testQuestion.setOptions(List.of("Programming Language", "Coffee", "Island", "Framework"));
-        testQuestion.setCorrectAnswer("Programming Language");
+        testQuestion.setAnswer("Programming Language");
     }
 
     // Quiz CRUD Tests
@@ -169,7 +169,7 @@ class QuizServiceTest {
         Question updatedDetails = new Question();
         updatedDetails.setText("What is Spring Framework?");
         updatedDetails.setOptions(List.of("Framework", "Language", "Database", "Server"));
-        updatedDetails.setCorrectAnswer("Framework");
+        updatedDetails.setAnswer("Framework");
 
         when(questionRepository.findById(1L)).thenReturn(Optional.of(testQuestion));
         when(questionRepository.save(any(Question.class))).thenReturn(testQuestion);
